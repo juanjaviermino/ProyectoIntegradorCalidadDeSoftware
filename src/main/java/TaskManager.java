@@ -1,22 +1,55 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Administra una lista de tareas, permitiendo la adición, eliminación y
+ * listado.
+ */
 public class TaskManager {
-    private List tasks = new ArrayList<>();
+    /** Lista de tareas administradas. */
+    private final List<String> tasks = new ArrayList<>();
 
-    public void addTask(String t) {
-        tasks.add(t);
-        System.out.println("Task added.");
+    /**
+     * Añade una nueva tarea a la lista.
+     *
+     * @param task La tarea a ser añadida.
+     */
+    public void addTask(final String task) {
+        if (task == null || task.trim().isEmpty()) {
+            System.out.println("Tarea inválida.");
+            return;
+        }
+        tasks.add(task);
+        System.out.println("Tarea añadida: " + task);
     }
 
+    /**
+     * Lista todas las tareas.
+     */
     public void listTasks() {
-        for (int i = 0; i < tasks.size(); i++) {
-            System.out.println("Task " + (i + 1) + ": " + tasks.get(i));
+        if (tasks.isEmpty()) {
+            System.out.println("Sin tareas disponibles.");
+            return;
+        }
+
+        int index = 1;
+        for (String task : tasks) {
+            System.out.println("Tarea " + index + ": " + task);
+            index++;
         }
     }
 
-    public void removeTask(int id) {
-        tasks.remove(id - 1);
-        System.out.println("Task removed.");
+    /**
+     * Remueve una tarea en base a su índice.
+     *
+     * @param id El índice de la tarea (base 1).
+     */
+    public void removeTask(final int id) {
+        if (id < 1 || id > tasks.size()) {
+            System.out.println("ID inválido. Ingresa un id de tarea válido.");
+            return;
+        }
+        String removedTask = tasks.remove(id - 1);
+        System.out.println("Tarea removida: " + removedTask);
     }
 }
