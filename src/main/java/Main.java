@@ -1,14 +1,10 @@
-// import static org.junit.jupiter.api.Assertions.assertEquals;
-
-// import org.junit.jupiter.api.Test;
-
 public class Main {
   public static void main(String[] args) {
-    System.out.println("Hello world!");
-  }
+    System.out.println("Task Manager System Started");
 
-  // @Test
-  // void addition() {
-  //     assertEquals(2, 1 + 1);
-  // }
+    TaskManager tm = new TaskManager();
+    tm.addTask("Complete project");
+    tm.listTasks();
+    tm.removeTask(1);
+  }
 }

@@ -6,8 +6,8 @@
 
     <properties>
         <!-- Establece el nivel de Java en 8 -->
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -29,9 +29,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version> <!-- Asegúrate de usar la última versión -->
                 <configuration>
-                    <source>11</source> <!-- Versión del lenguaje -->
-                    <target>11</target> <!-- Versión del bytecode -->
-                    <encoding>UTF-8</encoding> <!-- Configuración de codificación -->
+                    <source>17</source> <!-- Cambiado a 17 -->
+                    <target>17</target> <!-- Cambiado a 17 -->
+                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
             <!-- Plugin para ejecutar pruebas -->
@@ -85,10 +85,13 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <outputXml>true</outputXml>
-                    <xmlOutputDirectory>${project.build.directory}</xmlOutputDirectory>
-                  </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.ow2.asm</groupId>
+                        <artifactId>asm</artifactId>
+                        <version>9.6</version>  <!-- Versión más reciente de ASM -->
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
