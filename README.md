@@ -16,22 +16,22 @@ Este proyecto tiene como objetivo aplicar diversas métricas de calidad de softw
 ### **1. Cobertura de Código (JaCoCo)**
 Se utilizó **JaCoCo** para evaluar la cobertura de código a través de pruebas unitarias. La siguiente imagen muestra el reporte generado:  
 
-![Cobertura de Código - JaCoCo](ruta/a/la/captura-jacoco.png)  
+![Cobertura de Código - JaCoCo](/captura-jacoco.jpg)  
 
 ### **2. Densidad de Defectos (SpotBugs)**
 SpotBugs se usó para identificar defectos en el código. El análisis final indicó que no se detectaron errores.  
 
-![Densidad de Defectos - SpotBugs](ruta/a/la/captura-spotbugs.png)  
+![Densidad de Defectos - SpotBugs](/captura-spotbugs.jpg)  
 
 ### **3. Problemas de Estilo (Checkstyle)**
 Checkstyle ayudó a corregir problemas de formato y estilo de código, asegurando el cumplimiento de buenas prácticas de programación.  
 
-![Errores de Estilo - Checkstyle](ruta/a/la/captura-checkstyle.png)  
+![Errores de Estilo - Checkstyle](/captura-checkstyle.jpg)  
 
 ### **4. Complejidad Ciclomática (SonarCloud)**
 El análisis de SonarCloud permitió evaluar la complejidad ciclomatica del código, ayudando a mejorar su mantenibilidad.  
 
-![Complejidad Ciclomática - SonarCloud](ruta/a/la/captura-sonarcloud.png)  
+![Complejidad Ciclomática - SonarCloud](/captura-sonarcloud.jpg)  
 
 ## Instalación y Uso  
 Para ejecutar el proyecto, sigue estos pasos:  
